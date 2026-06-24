@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全国50寺院調査から見えた「ご縁がつながり続けるお寺」5つの共通点</title>
+<style>
+:root {
+  --ink: #1a1208;
+  --paper: #faf8f3;
+  --gold: #c9962a;
+  --gold-l: #f5e8c0;
+  --brown: #5c3d1e;
+  --brown-d: #3a1f08;
+  --border: #e2d5bc;
+  --muted: #8a7560;
+  --red: #c0392b;
+  --green: #1a6b3c;
+  --blue: #1a5f8b;
+  --purple: #7b2d8b;
+  --orange: #d35400;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;
+  background:var(--paper);color:var(--ink);line-height:1.75;
+  font-size:17px;
+}
+
+/* ─── COVER ─── */
+.cover{
+  background:linear-gradient(160deg,var(--brown-d) 0%,#5c3410 50%,var(--brown-d) 100%);
+  color:#fff;padding:3rem 1.5rem 2.5rem;text-align:center;position:relative;overflow:hidden;
+  min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;
+}
+.cover::before{
+  content:'';position:absolute;
+  width:340px;height:420px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 250' fill='white'%3E%3Crect x='15' y='232' width='170' height='14'/%3E%3Crect x='35' y='220' width='130' height='14'/%3E%3Crect x='52' y='172' width='96' height='50'/%3E%3Cpolygon points='-4,172 100,142 204,172'/%3E%3Crect x='-4' y='167' width='208' height='7'/%3E%3Crect x='66' y='132' width='68' height='42'/%3E%3Cpolygon points='20,132 100,106 180,132'/%3E%3Crect x='18' y='127' width='164' height='7'/%3E%3Crect x='78' y='96' width='44' height='38'/%3E%3Cpolygon points='42,96 100,72 158,96'/%3E%3Crect x='40' y='91' width='120' height='7'/%3E%3Crect x='95' y='58' width='10' height='36'/%3E%3Cellipse cx='100' cy='56' rx='14' ry='5'/%3E%3Cellipse cx='100' cy='48' rx='10' ry='4'/%3E%3Cellipse cx='100' cy='41' rx='7' ry='3'/%3E%3Cpolygon points='93,41 100,26 107,41'/%3E%3C/svg%3E") no-repeat center/contain;
+  opacity:.07;
+  top:50%;left:50%;transform:translate(-50%,-50%);pointer-events:none;
+}
+.cover-badge{
+  display:inline-block;background:var(--gold);color:var(--brown-d);
+  border-radius:20px;padding:.3rem 1.1rem;font-size:.78rem;font-weight:700;
+  letter-spacing:.08em;margin-bottom:1.2rem;position:relative;
+}
+.cover h1{
+  font-size:clamp(1.5rem,5vw,2.2rem);font-weight:900;line-height:1.35;
+  letter-spacing:.02em;position:relative;margin-bottom:1rem;
+}
+.cover h1 em{font-style:normal;color:var(--gold);}
+.cover-sub{
+  opacity:.8;font-size:.92rem;line-height:1.8;position:relative;
+  max-width:480px;margin:0 auto 1.8rem;
+}
+.cover-source{
+  display:inline-flex;align-items:center;gap:.5rem;background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.2);border-radius:30px;padding:.5rem 1.2rem;
+  font-size:.8rem;position:relative;
+}
+.cover-source span{color:var(--gold);font-weight:700;}
+.cover-scroll{margin-top:2rem;opacity:.5;font-size:.75rem;position:relative;}
+.cover-scroll::before{content:'↓';display:block;font-size:1.2rem;margin-bottom:.2rem;}
+
+/* ─── CONTAINER ─── */
+.wrap{max-width:680px;margin:0 auto;padding:0 1.2rem;}
+
+/* ─── SECTION HEADERS ─── */
+.sec{margin:0;padding:3rem 0 0;}
+.sec-label{
+  display:inline-block;background:var(--gold);color:var(--brown-d);
+  border-radius:4px;padding:.15rem .6rem;font-size:.7rem;font-weight:700;
+  letter-spacing:.08em;margin-bottom:.5rem;
+}
+.sec h2{
+  font-size:clamp(1.2rem,4vw,1.55rem);font-weight:900;line-height:1.3;
+  margin-bottom:.6rem;
+}
+.sec-lead{color:var(--muted);font-size:1rem;line-height:1.85;margin-bottom:1.5rem;}
+
+/* ─── INTRO BOX ─── */
+.intro-box{
+  background:#fff;border-radius:16px;border:1px solid var(--border);
+  padding:1.5rem;margin:2rem 0;
+}
+.intro-box p{font-size:1rem;line-height:1.9;margin-bottom:.9rem;}
+.intro-box p:last-child{margin-bottom:0;}
+.intro-box strong{color:var(--brown);}
+.highlight-line{
+  background:var(--gold-l);border-left:4px solid var(--gold);
+  border-radius:0 10px 10px 0;padding:.8rem 1.1rem;margin:1rem 0;
+  font-size:.92rem;line-height:1.6;font-weight:600;color:var(--brown-d);
+}
+
+/* ─── TRAIT CARDS ─── */
+.trait{
+  background:#fff;border-radius:16px;border:1px solid var(--border);
+  overflow:hidden;margin-bottom:1.5rem;
+  box-shadow:0 2px 12px rgba(0,0,0,.05);
+}
+.trait-head{
+  padding:1.2rem 1.4rem 1rem;display:flex;align-items:flex-start;gap:1rem;
+}
+.trait-num{
+  flex-shrink:0;width:44px;height:44px;border-radius:50%;
+  background:var(--brown);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.1rem;font-weight:900;
+}
+.trait-title-wrap{}
+.trait-label{font-size:.68rem;font-weight:700;color:var(--muted);letter-spacing:.07em;margin-bottom:.2rem;}
+.trait-title{font-size:1.05rem;font-weight:900;line-height:1.3;color:var(--brown-d);}
+.trait-body{padding:0 1.4rem 1.4rem;}
+.trait-body p{font-size:.96rem;line-height:1.85;color:#333;margin-bottom:.9rem;}
+.trait-body p:last-of-type{margin-bottom:0;}
+
+.evidence{
+  background:var(--paper);border-radius:10px;padding:.9rem 1rem;
+  margin:.8rem 0;border-left:3px solid var(--gold);
+}
+.evidence-label{font-size:.65rem;font-weight:700;color:var(--gold);letter-spacing:.07em;margin-bottom:.3rem;}
+.evidence-list{list-style:none;}
+.evidence-list li{font-size:.91rem;line-height:1.65;padding:.25rem 0;display:flex;gap:.4rem;align-items:flex-start;}
+.evidence-list li::before{content:'▶';color:var(--gold);font-size:.55rem;margin-top:.3rem;flex-shrink:0;}
+.evidence-list li > div{flex:1;}
+.cite{display:block;font-size:.82rem;color:#7a6a60;font-weight:600;margin-top:.2rem;letter-spacing:.02em;}
+
+.why-box{
+  background:#fff8f0;border-radius:8px;padding:.7rem .9rem;margin:.6rem 0;
+  font-size:.92rem;line-height:1.75;border:1px solid #f0d9a8;
+}
+.why-box .why-label{font-size:.65rem;font-weight:700;color:var(--orange);letter-spacing:.06em;margin-bottom:.2rem;}
+
+/* ─── DIVIDER ─── */
+.divider{text-align:center;margin:2.5rem 0 0;color:var(--muted);font-size:.8rem;}
+.divider::before,.divider::after{content:'──';margin:0 .5rem;}
+
+/* ─── ROADMAP SECTION ─── */
+.roadmap-wrap{margin:2rem 0;}
+.roadmap-card{
+  border-radius:16px;overflow:hidden;margin-bottom:1.2rem;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);
+}
+.roadmap-head{padding:1rem 1.4rem;display:flex;align-items:center;gap:.8rem;}
+.roadmap-icon{font-size:1.4rem;}
+.roadmap-timing{
+  font-size:.68rem;font-weight:700;letter-spacing:.08em;opacity:.9;
+  margin-bottom:.1rem;
+}
+.roadmap-title{font-size:1rem;font-weight:800;line-height:1.2;}
+.roadmap-body{padding:1rem 1.4rem 1.3rem;}
+
+/* NOW */
+.roadmap-now .roadmap-head{background:linear-gradient(135deg,#c0392b,#922b21);color:#fff;}
+.roadmap-now .roadmap-body{background:#fff8f8;border:1px solid #f5c6c3;border-top:none;border-radius:0 0 16px 16px;}
+
+/* 6MON */
+.roadmap-6m .roadmap-head{background:linear-gradient(135deg,#1a5f8b,#154360);color:#fff;}
+.roadmap-6m .roadmap-body{background:#f5f9ff;border:1px solid #b8d4ee;border-top:none;border-radius:0 0 16px 16px;}
+
+/* 3YR */
+.roadmap-3y .roadmap-head{background:linear-gradient(135deg,#1a6b3c,#145a32);color:#fff;}
+.roadmap-3y .roadmap-body{background:#f5fff8;border:1px solid #a8dcbe;border-top:none;border-radius:0 0 16px 16px;}
+
+.action-list{list-style:none;}
+.action-item{
+  display:flex;align-items:flex-start;gap:.7rem;
+  padding:.65rem 0;border-bottom:1px solid rgba(0,0,0,.06);
+}
+.action-item:last-child{border-bottom:none;padding-bottom:0;}
+.action-check{
+  flex-shrink:0;width:8px;height:8px;border-radius:50%;
+  background:currentColor;border:none;
+  margin-top:.55rem;
+}
+.roadmap-now .action-check{color:#c0392b;}
+.roadmap-6m .action-check{color:#1a5f8b;}
+.roadmap-3y .action-check{color:#1a6b3c;}
+.action-text{font-size:.94rem;line-height:1.7;}
+.action-text strong{display:block;font-size:.96rem;margin-bottom:.15rem;}
+.action-text span{font-size:.85rem;color:var(--muted);}
+.action-tag{
+  display:inline-block;font-size:.62rem;font-weight:700;padding:.08rem .35rem;
+  border-radius:3px;margin-left:.3rem;vertical-align:middle;
+}
+.tag-free{background:#d5f5e3;color:#1a6b3c;}
+.tag-low{background:#d6eaf8;color:#1a5f8b;}
+.tag-mid{background:#fae5d3;color:#d35400;}
+.tag-skill{background:#e8daef;color:#7b2d8b;}
+
+/* ─── CHECKLIST ─── */
+.checklist-wrap{
+  background:#fff;border-radius:16px;border:1px solid var(--border);
+  padding:1.4rem;margin:2rem 0;
+}
+.checklist-title{font-size:.9rem;font-weight:700;color:var(--brown);margin-bottom:1rem;display:flex;align-items:center;gap:.5rem;}
+.check-group{margin-bottom:1.2rem;}
+.check-group-label{font-size:.72rem;font-weight:700;color:var(--muted);letter-spacing:.07em;margin-bottom:.4rem;padding-bottom:.3rem;border-bottom:1px solid var(--border);}
+.check-item{display:flex;align-items:flex-start;gap:.6rem;padding:.4rem 0;font-size:.93rem;line-height:1.6;cursor:pointer;position:relative;}
+.check-item:hover .check-box-visual{border-color:var(--brown);}
+.check-input{display:none;}
+.check-box-visual{flex-shrink:0;width:22px;height:22px;border:2px solid var(--border);border-radius:5px;margin-top:.08rem;transition:background .15s,border-color .15s;display:flex;align-items:center;justify-content:center;background:#fff;}
+.check-input:checked ~ .check-box-visual{background:var(--brown);border-color:var(--brown);}
+.check-box-visual::after{content:'✓';color:transparent;font-size:.82rem;font-weight:700;line-height:1;transition:color .15s;}
+.check-input:checked ~ .check-box-visual::after{color:#fff;}
+.check-item-text{flex:1;}
+.score-bar{background:var(--paper);border-radius:10px;padding:.9rem 1rem;margin-top:.8rem;text-align:center;font-size:.82rem;color:var(--muted);}
+.score-bar strong{color:var(--brown);font-size:1.15rem;}
+.score-track{background:#e0d8d0;border-radius:10px;height:10px;overflow:hidden;margin:.55rem auto;max-width:280px;}
+.score-fill{height:100%;background:linear-gradient(90deg,var(--red),var(--gold));border-radius:10px;transition:width .4s ease;width:0%;}
+.score-stage{font-weight:700;margin-top:.3rem;font-size:.88rem;transition:color .3s;}
+
+/* ─── SUMMARY ─── */
+.summary-section{
+  background:linear-gradient(135deg,var(--brown-d),#5c3410);
+  color:#fff;padding:2.5rem 1.5rem;margin:2.5rem 0 0;
+  border-radius:16px;
+}
+.summary-section h2{font-size:1.1rem;font-weight:800;margin-bottom:1.2rem;color:var(--gold-l);}
+.summary-point{
+  display:flex;gap:.8rem;margin-bottom:.8rem;align-items:flex-start;
+}
+.summary-point .sp-num{
+  flex-shrink:0;width:24px;height:24px;border-radius:50%;
+  background:var(--gold);color:var(--brown-d);
+  display:flex;align-items:center;justify-content:center;
+  font-size:.72rem;font-weight:900;margin-top:.1rem;
+}
+.summary-point p{font-size:.94rem;line-height:1.7;opacity:.9;}
+.summary-cta{
+  background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);
+  border-radius:12px;padding:1.1rem 1.2rem;margin-top:1.5rem;text-align:center;
+}
+.summary-cta p{font-size:.85rem;line-height:1.7;opacity:.85;margin-bottom:.8rem;}
+.cta-btn{
+  display:inline-block;background:var(--gold);color:var(--brown-d);
+  border-radius:30px;padding:.65rem 2rem;font-weight:800;font-size:.88rem;
+  text-decoration:none;
+}
+
+/* ─── FOOTER ─── */
+footer{text-align:center;padding:2rem 1rem;color:var(--muted);font-size:.75rem;line-height:1.8;}
+
+/* ─── PAGE BREAK HINT (for PDF) ─── */
+.page-break{border:none;border-top:2px dashed var(--border);margin:3rem 0;}
+
+/* ─── MOBILE ─── */
+@media(max-width:480px){
+  .cover{padding:2.5rem 1.2rem 2rem;min-height:auto;}
+  .cover h1{font-size:1.35rem;}
+  .wrap{padding:0 1rem;}
+  .trait-head{gap:.7rem;}
+  .trait-num{width:38px;height:38px;font-size:.95rem;}
+  .trait-title{font-size:.95rem;}
+  .roadmap-head{padding:.9rem 1.1rem;}
+  .roadmap-body{padding:.9rem 1.1rem 1.1rem;}
+  .summary-section{padding:1.8rem 1.1rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════ COVER ══════════════ -->
+<section class="cover">
+  <div class="cover-badge">📊 LINE特典レポート</div>
+  <h1>全国50寺院調査から見えた<br><em>「ご縁がつながり続けるお寺」</em><br>5つの共通点</h1>
+  <p class="cover-sub">
+    SNSを始めても続かない。イベントをやっても人が来ない。<br>
+    それは施策の問題ではなく、<em>順番</em>の問題でした。
+  </p>
+  <div class="cover-source">
+    <span>調査対象</span> 全国50寺院 ／ 7カテゴリ
+  </div>
+  <p class="cover-scroll">スクロールして読む</p>
+</section>
+
+<div class="wrap">
+
+<!-- ══════════════ WHY ══════════════ -->
+<section class="sec">
+  <div class="sec-label">調査のきっかけ</div>
+  <h2>なぜ私が<br>これを調べたのか</h2>
+  <div class="intro-box">
+    <p>地方都市の小さな寺院で、准坊守をしています。</p>
+    <p>10年後、20年後も地域にこのお寺を残したい。そんな思いから、全国のお寺を調べ始めました。</p>
+    <p>ただ漠然と「いいお寺」を探したわけではありません。<strong>SNS・YouTube・地域イベント・グリーフケアなど、実際に何か動いているお寺</strong>に絞り込み、その中から代表的な50寺院を選びました。</p>
+    <p>「うちより規模の大きいお寺の話でしょ」と思うかもしれません。でも調べてみると、小さな寺院でも、ほんのすこし動き方を変えるだけで、ご縁が広がっている事例がいくつもありました。</p>
+  </div>
+</section>
+
+<!-- ══════════════ INTRO ══════════════ -->
+<section class="sec">
+  <div class="sec-label">はじめに</div>
+  <h2>「動いているお寺」と<br>「止まっているお寺」の<br>決定的な違い</h2>
+
+  <div class="intro-box">
+    <p>全国には約<strong>77,000</strong>のお寺があります。そのうち約<strong>67%</strong>が「檀家数は減っている」と回答し、<strong>30%</strong>が「30年以内に廃寺の可能性がある」と答えています。</p>
+    <p>一方で、SNSに数万人のフォロワーを持ち、全国から非檀家が相談に来るお寺が確実に増えています。この差はどこから生まれるのでしょうか。</p>
+    <p>今回、<strong>全国50寺院</strong>を徹底調査して見えてきたのは、「動いているお寺」に共通する5つの原則でした。</p>
+    <div class="highlight-line">
+      重要なのは「お金をかけること」でも「特別な才能があること」でもありません。<br>
+      「誰の、どんな悩みに、どう応えるか」を<strong>明確に決めたかどうか</strong>だけでした。
+    </div>
+  </div>
+</section>
+
+<div class="divider">5つの共通点</div>
+
+<!-- ══════════════ TRAIT 1 ══════════════ -->
+<section class="sec">
+  <div class="trait">
+    <div class="trait-head">
+      <div class="trait-num">1</div>
+      <div class="trait-title-wrap">
+        <div class="trait-label">COMMON POINT 01</div>
+        <div class="trait-title">「誰のどんな悩み」を<br>一行で言える</div>
+      </div>
+    </div>
+    <div class="trait-body">
+      <p>調査した50寺院すべてに共通していたのは、「自分たちが誰の、どんな痛みを解決するか」が明確だったことです。</p>
+      <p>「お寺です」「法事・葬儀を行っています」では選ばれません。現代人は検索し、比較し、共感できる場所を探しています。</p>
+
+      <div class="evidence">
+        <div class="evidence-label">📍 調査事例より</div>
+        <ul class="evidence-list">
+          <li><div>「生きる意味が分からない、人間関係に悩む社会人・経営者」→ YouTube70万人登録<span class="cite">佛心宗 大叢山　福厳寺（愛知県）</span></div></li>
+          <li><div>「大切な人を亡くした悲しみを誰にも話せない人」→ 死の体験旅行®<span class="cite">倶生山 慈陽院 なごみ庵（神奈川県）</span></div></li>
+          <li><div>「仏教をわかりやすく知りたい20〜40代入門者」→ YouTube法話で若者層に届く<span class="cite">真言宗豊山派　天明寺（群馬県）</span></div></li>
+          <li><div>「怖い話は好きだけど、お寺には縁がなかった人」→ 怪談説法で仏教の教えを伝える<span class="cite">日蓮宗　蓮久寺・三木大雲住職（京都府）</span></div></li>
+        </ul>
+      </div>
+
+      <div class="why-box">
+        <div class="why-label">💡 なぜこれが重要か</div>
+        「誰でも来てください」と言うお寺には、誰も来ません。「〇〇で悩んでいる人のためのお寺」と言うお寺に、その悩みを抱えた人が日本全国から来ます。ターゲットを絞ることは、客を減らすことではなく、深いファンを作ることです。
+      </div>
+    </div>
+  </div>
+
+<!-- ══════════════ TRAIT 2 ══════════════ -->
+  <div class="trait">
+    <div class="trait-head">
+      <div class="trait-num">2</div>
+      <div class="trait-title-wrap">
+        <div class="trait-label">COMMON POINT 02</div>
+        <div class="trait-title">檀家以外が入れる<br>「無料の入口」を持つ</div>
+      </div>
+    </div>
+    <div class="trait-body">
+      <p>ご縁がつながるお寺は必ず、「お金を払う前に試せる入口」を持っています。YouTube・Instagram・note・無料イベント。これらはすべて、非檀家との「最初の接点」です。</p>
+      <p>檀家制度が機能していた時代は地縁が入口でした。今は「コンテンツ」が入口です。</p>
+
+      <div class="evidence">
+        <div class="evidence-label">📍 調査事例より</div>
+        <ul class="evidence-list">
+          <li><div>YouTube動画（無料）→ コメントで相談 → 来寺・法事受注<span class="cite">佛心宗 大叢山　福厳寺（愛知県）／真言宗豊山派　天明寺（群馬県）</span></div></li>
+          <li><div>X（Twitter）でのユーモアある投稿がバズ → お寺が身近になり、門をくぐってもらうきっかけに<span class="cite">浄土真宗本願寺派　永明寺・松崎智海住職（福岡県）／X 約4.2万フォロワー</span></div></li>
+          <li><div>断食×禅の宿坊リトリート（坐禅・写経・茶道つき）→ 全国から非檀家が参加<span class="cite">臨済宗妙心寺派　龍雲寺禅堂（静岡県）</span></div></li>
+          <li><div>無料の人生相談（対面・オンライン）→ 信頼が生まれる → ご縁が続く<span class="cite">曹洞宗　正山寺（東京都）／約3カ月待ちの人気</span></div></li>
+        </ul>
+      </div>
+
+      <div class="why-box">
+        <div class="why-label">💡 なぜこれが重要か</div>
+        「まずお気軽にご相談を」は入口ではありません。現代人は「気軽」でも知らない場所には行きません。コンテンツを通じて「このお寺は自分のことを分かってくれる」と感じてから初めて動きます。信頼は会う前に作られます。
+      </div>
+    </div>
+  </div>
+
+<!-- ══════════════ TRAIT 3 ══════════════ -->
+  <div class="trait">
+    <div class="trait-head">
+      <div class="trait-num">3</div>
+      <div class="trait-title-wrap">
+        <div class="trait-label">COMMON POINT 03</div>
+        <div class="trait-title">住職の「人格」が<br>SNSで見える</div>
+      </div>
+    </div>
+    <div class="trait-body">
+      <p>調査した50寺院で注目度の高いお寺に共通していたのは、「お寺の情報」ではなく「住職・担当者の人格」を発信していることでした。</p>
+      <p>人は「場所」ではなく「人」についていきます。どんな考えを持ち、何に悩み、何を大切にしているか。それが見えるから、会いに来ます。</p>
+
+      <div class="evidence">
+        <div class="evidence-label">📍 調査事例より</div>
+        <ul class="evidence-list">
+          <li><div>ヒューマンビートボックスをする副住職の動画 → 「お坊さんって面白い」で拡散<span class="cite">曹洞宗系単立　平成院・赤坂陽月副住職（岩手県）</span></div></li>
+          <li><div>副住職が日々の取り組みや思いをほぼ毎日ブログ・SNSで発信 → 人柄が見えて相談しやすいお寺に<span class="cite">浄土真宗本願寺派　信行寺・神崎修生副住職（福岡県）</span></div></li>
+          <li><div>仏教行事・法話をSNSで発信 → 檀家外からの問合せ急増<span class="cite">浄土宗　龍岸寺（京都府）</span></div></li>
+          <li><div>副住職が英語で禅を発信 → 海外からの拝観・体験希望が殺到<span class="cite">臨済宗妙心寺派　退蔵院・松山大耕副住職（京都府）</span></div></li>
+        </ul>
+      </div>
+
+      <div class="why-box">
+        <div class="why-label">💡 なぜこれが重要か</div>
+        「〇〇宗△△寺」という名前を覚える人はいません。「あの面白いお坊さん」「悩みを話せるあの住職」と覚えられます。個人が前に出ることへの抵抗は理解できます。でも、顔が見えないお寺には現代人は相談できません。
+      </div>
+    </div>
+  </div>
+
+<!-- ══════════════ TRAIT 4 ══════════════ -->
+  <div class="trait">
+    <div class="trait-head">
+      <div class="trait-num">4</div>
+      <div class="trait-title-wrap">
+        <div class="trait-label">COMMON POINT 04</div>
+        <div class="trait-title">収益が「供養料」<br>以外にある</div>
+      </div>
+    </div>
+    <div class="trait-body">
+      <p>ご縁がつながるお寺は、収益源が複数あります。檀家管理費・供養料だけに依存しているお寺は、檀家数の減少とともに収益が下がり続けます。</p>
+      <p>これは「お寺を商売にする」話ではありません。「境内・住職のスキル・お寺のコンテンツ」という既存の資産を活かして、新しい接点を作る話です。</p>
+
+      <div class="evidence">
+        <div class="evidence-label">📍 調査事例より（収益の多角化パターン）</div>
+        <ul class="evidence-list">
+          <li><div>YouTube広告収益 ＋ 書籍・オンラインスクール月額<span class="cite">佛心宗 大叢山　福厳寺・大愚道場（愛知県）</span></div></li>
+          <li><div>宿坊（朝勤行・阿字観瞑想・写経体験つき）→ 海外からの宿泊者多数<span class="cite">高野山真言宗　恵光院（和歌山県）</span></div></li>
+          <li><div>永代供養（宗派不問・お骨佛）＋明朗会計<span class="cite">浄土宗　一心寺（大阪府）</span></div></li>
+          <li><div>入会無料の会員組織「築地本願寺倶楽部」→ 婚活・終活サポートへ展開<span class="cite">浄土真宗本願寺派　築地本願寺（東京都）</span></div></li>
+        </ul>
+      </div>
+
+      <div class="why-box">
+        <div class="why-label">💡 なぜこれが重要か</div>
+        収入の柱が一本しかないと、その柱が細くなったとき支えきれなくなります。ただ「複数を同時に整える」より先に「ご縁をいただける柱を一本確立する」ことが大切です。まず「これで非檀家の方にもお役に立てる」と言えるものを一つ作り、そこから少しずつ広げていく順番が正しいと思います。
+      </div>
+    </div>
+  </div>
+
+<!-- ══════════════ TRAIT 5 ══════════════ -->
+  <div class="trait">
+    <div class="trait-head">
+      <div class="trait-num">5</div>
+      <div class="trait-title-wrap">
+        <div class="trait-label">COMMON POINT 05</div>
+        <div class="trait-title">「SNS→LINE→来寺」の<br>導線が設計されている</div>
+      </div>
+    </div>
+    <div class="trait-body">
+      <p>ただ発信しているだけでは不十分です。ご縁がつながるお寺は、「知る→信頼する→相談する→来寺する」という導線を意識して設計しています。</p>
+      <p>SNSは「入口」。LINEは「関係を深める場所」。来寺は「信頼の結実」です。この3段階をつなぐ設計があるかどうかが、発信が「集客」になるかどうかの分岐点です。</p>
+
+      <div class="evidence">
+        <div class="evidence-label">📍 調査から見えた導線パターン</div>
+        <ul class="evidence-list">
+          <li>YouTube（認知）→ 公式サイト（信頼）→ LINE相談（関係）→ セミナー申込（来寺）</li>
+          <li>Instagram（共感）→ プロフィールリンク（誘導）→ LINE登録（関係維持）→ 永代供養相談</li>
+          <li>note記事（教育）→ LINE公式（問い合わせ）→ AI自動応答（24時間対応）→ 法事受注</li>
+        </ul>
+      </div>
+
+      <div class="why-box">
+        <div class="why-label">💡 なぜこれが重要か</div>
+        SNSのフォロワーが増えても、次の行動を促す導線がなければ「いいね」で終わります。「次は何をしてほしいか」を一つだけ明確にする。それだけで問い合わせ率は大きく変わります。
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="page-break">
+
+<!-- ══════════════ ROADMAP ══════════════ -->
+<section class="sec">
+  <div class="sec-label">アクションロードマップ</div>
+  <h2>で、うちのお寺は<br>何をすればいい？</h2>
+  <p class="sec-lead">施策の前に、一度だけ立ち止まってください。「うちのお寺が10年後も残るために、何を守りたいか」。その答えが見えてから動く方が、すべての施策が一本の線でつながります。<br>そのうえで、「今すぐ」「半年以内」「3年後」に分けてやるべきことを整理しました。まず「今すぐできること」を1つだけ選んで動いてください。</p>
+
+  <div class="roadmap-wrap">
+
+    <!-- NOW -->
+    <div class="roadmap-card roadmap-now">
+      <div class="roadmap-head">
+        <div class="roadmap-icon">⚡</div>
+        <div>
+          <div class="roadmap-timing">STEP 1</div>
+          <div class="roadmap-title">今すぐできる施策<br><small style="font-size:.72rem;opacity:.85;">コスト0円・1週間以内</small></div>
+        </div>
+      </div>
+      <div class="roadmap-body">
+        <ul class="action-list">
+          <li class="action-item">
+            <div class="action-check"></div>
+            <div class="action-text">
+              <strong>「うちのお寺が解決できる悩み」を一行書く<span class="action-tag tag-free">無料</span></strong>
+              <span>例：「親の死に間に合わなかった罪悪感を抱える人に寄り添う」。まず紙に書いてみる。書けなければ、それが最初の課題です。</span>
+            </div>
+          </li>
+          <li class="action-item">
+            <div class="action-check"></div>
+            <div class="action-text">
+              <strong>Googleマイビジネスを整備する<span class="action-tag tag-free">無料</span></strong>
+              <span>住所・電話・写真・営業時間を正確に。「お寺 ＋ 地名」検索で上位に出ることが最低限の集客インフラです。</span>
+            </div>
+          </li>
+          <li class="action-item">
+            <div class="action-check"></div>
+            <div class="action-text">
+              <strong>Instagram or YouTubeアカウントを住職名で開設<span class="action-tag tag-free">無料</span></strong>
+              <span>「〇〇寺」ではなく「住職 〇〇」で。人に向けてフォローされるためです。プロフィールに「誰の悩みに応えるか」を入れる。</span>
+            </div>
+          </li>
+          <li class="action-item">
+            <div class="action-check"></div>
+            <div class="action-text">
+              <strong>近隣・同規模の「動いているお寺」を5件リサーチ<span class="action-tag tag-free">無料</span></strong>
+              <span>SNS・HP・YouTubeで何を発信しているか、どんな悩みを解決しているか。まず知ることが最速の学びです。</span>
+            </div>
+          </li>
+          <li class="action-item">
+            <div class="action-check"></div>
+            <div class="action-text">
+              <strong>HPに「お気軽にLINEでご相談」ボタンを設置<span class="action-tag tag-free">無料</span></strong>
+              <span>「電話するのは怖い」という人でも、LINEなら相談できます。問い合わせの入口を増やすだけで反応は変わります。</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 6MON -->
+    <div class="roadmap-card roadmap-6m">
+      <div class="roadmap-head">
+        <div class="roadmap-icon">📅</div>
+        <div>
+          <div class="roadmap-timing">STEP 2</div>
+          <div class="roadmap-title">半年以内にやる施策<br><small style="font-size:.72rem;opacity:.85;">小さく始めて継続する</small></div>
+        </div>
+      </div>
+      <div class="roadmap-body">
+        <ul class="action-list">
+          <li class="action-item">
+            <div class="action-check"></div>
+            <div class="action-text">
+              <strong>SNS発信を月4回以上、3ヶ月継続する<span class="action-tag tag-free">無料</span></strong>
+              <span>最初の3ヶ月は成果を期待しないでください。発信を続けることで「どのネタが反応されるか」が分かってきます。反応のあった話題を深掘りしていく。</span>
+            </div>
+          </li>
+          <li class="action-item">
+            <div class="action-check"></div>
+            <div class="action-text">
+              <strong>HPに「非檀家向け」ページを追加<span class="action-tag tag-low">低コスト</span></strong>
+              <span>「永代供養のご相談」「一日体験」「グリーフ相談」など。檀家でなくても関われる入口を明示する。「敷居が高い」はイメージから来ます。</span>
+            </div>
+          </li>
+          <li class="action-item">
+            <div class="action-check"></div>
+            <div class="action-text">
+              <strong>LINE公式アカウントを開設し自動応答を設定<span class="action-tag tag-free">無料〜</span></strong>
+              <span>「よくある質問」「法事の費用目安」「お問い合わせ受付」を自動化。深夜の問い合わせにも翌朝対応できる体制を作る。</span>
+            </div>
+          </li>
+          <li class="action-item">
+            <div class="action-check"></div>
+            <div class="action-text">
+              <strong>季節イベントを一般公開に変える<span class="action-tag tag-free">無料</span></strong>
+              <span>花まつり・盂蘭盆会・除夜の鐘を「檀家のみ」から「どなたでも」に。入場無料で関わりを作る。次の法事・相談につながります。</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 3YR -->
+    <div class="roadmap-card roadmap-3y">
+      <div class="roadmap-head">
+        <div class="roadmap-icon">🌱</div>
+        <div>
+          <div class="roadmap-timing">STEP 3</div>
+          <div class="roadmap-title">3年かけて考える施策<br><small style="font-size:.72rem;opacity:.85;">お寺の「核」を作る</small></div>
+        </div>
+      </div>
+      <div class="roadmap-body">
+        <ul class="action-list">
+          <li class="action-item">
+            <div class="action-check"></div>
+            <div class="action-text">
+              <strong>コンテンツを100本積み上げる<span class="action-tag tag-free">無料</span></strong>
+              <span>YouTube・Instagram・note・podcast。100本を超えると「検索で出てくる」「見つけてもらえる」状態になります。月4本なら約2年で達成できます。</span>
+            </div>
+          </li>
+          <li class="action-item">
+            <div class="action-check"></div>
+            <div class="action-text">
+              <strong>「お寺でしかできない体験」を1つパッケージ化<span class="action-tag tag-mid">中コスト</span></strong>
+              <span>坐禅・写経・精進料理・グリーフ相談・終活ワーク。1つでいい。「うちのお寺に来る理由」を明確にする体験商品を作る。外国人向けなら単価は3〜5倍になります。</span>
+            </div>
+          </li>
+          <li class="action-item">
+            <div class="action-check"></div>
+            <div class="action-text">
+              <strong>会員制・サブスクモデルを検討する<span class="action-tag tag-mid">中コスト</span></strong>
+              <span>月額500〜3,000円で「お寺とつながる権利」を提供。法話配信・相談割引・イベント優先。小規模でも100人の会員で月5〜30万円の安定収入になります。</span>
+            </div>
+          </li>
+          <li class="action-item">
+            <div class="action-check"></div>
+            <div class="action-text">
+              <strong>専門資格を1つ取得する<span class="action-tag tag-skill">スキル投資</span></strong>
+              <span>グリーフケア認定士・臨床宗教師・スピリチュアルケア師など。「お坊さん」ではなく「グリーフケアができるお坊さん」になることで、対象者が明確になり単価も上がります。</span>
+            </div>
+          </li>
+          <li class="action-item">
+            <div class="action-check"></div>
+            <div class="action-text">
+              <strong>収益の3本柱を確立する<span class="action-tag tag-mid">中コスト</span></strong>
+              <span>①供養・法事（既存） ②体験・相談（新規非檀家） ③コンテンツ・研修（スケール）。この3つで収益を分散させることで、檀家減少の影響を吸収できます。</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════ CHECKLIST ══════════════ -->
+<hr class="page-break">
+<section class="sec">
+  <div class="sec-label">自己診断</div>
+  <h2>うちのお寺は<br>どのステージ？</h2>
+  <p class="sec-lead">以下のチェックリストで、今の状態を確認しましょう。</p>
+
+  <div class="checklist-wrap">
+    <div class="checklist-title">🔍 ご縁がつながるお寺 自己診断チェックリスト</div>
+
+    <div class="check-group">
+      <div class="check-group-label">基盤（まずここから）</div>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">「うちのお寺が解決できる悩み」を一行で言える</span></label>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">Googleマイビジネスに写真・電話・住所が正確に登録されている</span></label>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">HPに「費用の目安」が明記されている</span></label>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">LINE・メールで問い合わせできる導線がある</span></label>
+    </div>
+
+    <div class="check-group">
+      <div class="check-group-label">発信（信頼を作る）</div>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">SNS（Instagram・YouTube等）で月2回以上発信している</span></label>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">住職・担当者の「顔」「考え方」が分かるコンテンツがある</span></label>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">発信内容は「お知らせ」ではなく「価値・共感・悩みへの答え」になっている</span></label>
+    </div>
+
+    <div class="check-group">
+      <div class="check-group-label">接続（檀家外とつながる）</div>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">檀家でなくても参加できるイベント・体験が年2回以上ある</span></label>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">LINE公式アカウントがある</span></label>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">「非檀家からの法事・相談」を実際に受けたことがある</span></label>
+    </div>
+
+    <div class="check-group">
+      <div class="check-group-label">収益（持続可能にする）</div>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">供養料・法事料以外の収入が年間10万円以上ある</span></label>
+      <label class="check-item"><input type="checkbox" class="check-input" onchange="updateScore()"><span class="check-box-visual"></span><span class="check-item-text">「料金を聞かれたらすぐ答えられる」透明な価格体系がある</span></label>
+    </div>
+
+    <div class="score-bar">
+      チェックした数：<strong id="scoreCount">0</strong> ／ <strong>12</strong>項目
+      <div class="score-track"><div class="score-fill" id="scoreBarFill"></div></div>
+      <div class="score-stage" id="scoreStage" style="color:var(--muted);">タップ／クリックして採点</div>
+      <div style="font-size:.72rem;margin-top:.5rem;color:var(--muted);">0〜3：基盤整備 ／ 4〜7：発信開始 ／ 8〜11：成長 ／ 12：先進寺院</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ SUMMARY ══════════════ -->
+<div class="summary-section">
+  <h2>📌 まとめ：ご縁がつながるお寺の5原則</h2>
+  <div class="summary-point">
+    <div class="sp-num">1</div>
+    <p>「誰のどんな悩み」を一行で言える。ターゲットが明確なお寺に、日本全国からその悩みを抱えた人が来る。</p>
+  </div>
+  <div class="summary-point">
+    <div class="sp-num">2</div>
+    <p>檀家以外が入れる無料の入口（コンテンツ・イベント）を持つ。信頼は会う前に作られる。</p>
+  </div>
+  <div class="summary-point">
+    <div class="sp-num">3</div>
+    <p>住職の人格がSNSで見える。人は「場所」ではなく「人」についていく。</p>
+  </div>
+  <div class="summary-point">
+    <div class="sp-num">4</div>
+    <p>収益が供養料以外にある。体験・相談・コンテンツで複線化し、檀家減少の影響を吸収する。</p>
+  </div>
+  <div class="summary-point">
+    <div class="sp-num">5</div>
+    <p>SNS→LINE→来寺の導線が設計されている。発信が「集客」になるのは導線があるときだけ。</p>
+  </div>
+
+  <div class="summary-cta">
+    <p>
+      最初の一歩は「今すぐできること」の中から<strong style="color:var(--gold-l);">1つだけ</strong>選んで、今週中に動くことです。<br>
+      全部やろうとすると、何もできません。
+    </p>
+  </div>
+</div>
+
+<!-- LINE継続 -->
+<p style="text-align:center;font-size:.86rem;color:var(--muted);margin:1.8rem 0 .5rem;line-height:1.9;">
+  これからも「ご縁がつながり続けるお寺」の事例や取り組みを<br>このLINEで配信していきますね。引き続きよろしくお願いします 🙏
+</p>
+
+</div><!-- /wrap -->
+
+<footer>
+  <p>全国50寺院調査から見えた「ご縁がつながり続けるお寺」5つの共通点</p>
+  <p>本資料は調査データに基づく参考情報です。各寺院の状況に応じてご活用ください。</p>
+  <p style="margin-top:.5rem;">© やな｜ご縁がつながるお寺づくり ／ 無断転載禁止</p>
+</footer>
+
+<script>
+function updateScore() {
+  var cbs = document.querySelectorAll('.check-input');
+  var total = cbs.length;
+  var checked = 0;
+  cbs.forEach(function(cb){ if(cb.checked) checked++; });
+  document.getElementById('scoreCount').textContent = checked;
+  var pct = total > 0 ? (checked / total) * 100 : 0;
+  document.getElementById('scoreBarFill').style.width = pct + '%';
+  var stage, color;
+  if(checked <= 3){ stage = '基盤整備フェーズ（まずここを固めましょう）'; color = '#c0392b'; }
+  else if(checked <= 7){ stage = '発信開始フェーズ（いい土台があります）'; color = '#d35400'; }
+  else if(checked <= 11){ stage = '成長フェーズ（かなり進んでいます！）'; color = '#1a5f8b'; }
+  else { stage = '🎉 先進寺院レベルです！'; color = '#1a6b3c'; }
+  var stageEl = document.getElementById('scoreStage');
+  stageEl.textContent = stage;
+  stageEl.style.color = color;
+}
+</script>
+</body>
+</html>
